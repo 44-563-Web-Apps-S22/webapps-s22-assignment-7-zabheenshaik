@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+        }
+
+        .flex-container>div {
+            /*div children of the flex container*/
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+    <title>Queue Page </title>
+</head>
+
+<body>
+    <h2> Zabheen builds a reversed queue </h2>
+
+    <div class="flex-container" id="target">
+        <div class="queue">row item 1</div>
+        <div class="queue">row item 2</div>
+        <div class="queue">row item 3</div>
+    </div>
+
+    <p> Press the button to create an new element of type div and then add it to the container.</p>
+    <br>
+    <input type="text" id="form_text" name="form_text">
+    <button onclick="makeNewDiv()"> Add value </button>
+    <br> <br>
+    <button onclick="fetchItem()"> Fetch</button>
+    <button onclick="zap()"> Zap values</button>
+    <button onclick="unique()">Unique</button>
+
+</body>
+
+<script>
+    function makeNewDiv() {
+        /* make the div and its text */
+        let element = document.createElement("div")
+        element.innerHTML = document.getElementById("form_text").value;
+        element.setAttribute('class', 'queue');
+        element.style.color = "orange"
+
+        /* add it to the container */
+        let container = document.getElementById('target')
+        container.insertBefore(element, container.firstChild);
+    }
+
+    function fetchItem() {
+        queueItems = document.getElementsByClassName('queue');
+        var len = queueItems.length;
+        if (len > 0) {
+            for (let i = 0; i < len; i++) {
+                queueItems[len - 1].remove();
+            }
+        }
+    }
+
+    function zap() {
+        var queueItems = document.getElementsByClassName("queue")
+        var len = queueItems.length;
+        var item = document.getElementById("form_text").value;
+        for (let i = 0; i < len; i++) {
+            if (item == queueItems[i].innerHTML) {
+                queueItems[i].remove();
+                console.log("We are getting rid of all the elements with that text");
+            }
+        }
+    }
+
+    function unique() {
+        queueItems = document.getElementsByClassName('queue');
+        var len = queueItems.length
+        for (let i = 0; i < len; i++) {
+            for (let j = i + 1; j < len - 1; j++) {
+                if (queueItems[i].innerHTML == queueItems[j].innerHTML) {
+                    queueItems[j].remove();
+                    
+                }
+            }
+        }
+ }
+
+</script>
+
+</html>
