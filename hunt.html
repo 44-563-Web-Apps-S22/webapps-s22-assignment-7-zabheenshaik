@@ -1,31 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Hunt</title>
-    <style>
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            background-color: red;
-        }
-
-        .flex-container>div {
-            /*div children of the flex container*/
-            background-color: #f1f1f1;
-            margin: 10px;
-            padding: 20px;
-            font-size: 30px;
-        }
-
-        /* Responsive layout */
-        @media (max-width: 600px) {
-            .flex-container {
-                flex-direction: column;
-                background-color: green;
-            }
-        }
-    </style>
+    <title>Hunt Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -36,14 +13,159 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-    <h2>Bird hunt by Zabheen Shaik</h2><br>
-    <div class="container-fluid">
-        <div class="d-inline p-2 bg-info "> Click on the squares to search for bird.</div>
-        <div class="d-inline p-2 bg-warning " id="shakes"> Number of shakes is zero.</div>
-        <div class="d-inline p-2 bg-dark text-white" id="score"> Location score is unknown.</div>
+    <h2> Bird Hunt by Reethu Gopireddy</h2>
+    <div class="container-fluid ">
+        <div class="d-inline p-2 bg-primary text-black centre">Click on the squares to search for bird.</div>
+        <div class="d-inline p-2 bg-success text-white" id="shakes"> Number of shakes is zero.</div>
+        <div class="d-inline p-2 bg-warning text-white" id="score"> Location score is unknown.</div>
+        
     </div>
     <br>
+
+
+    <div style="margin-left: 20px;">
+        <div class="row">
+            <div class="col-sm-1"><img src="Tree.jpg" id="id0" alt="tree" onclick="check(0)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id1" alt="tree" onclick="check(1)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id2" alt="tree" onclick="check(2)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id3" alt="tree" onclick="check(3)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id4" alt="tree" onclick="check(4)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"><img src="Tree.jpg" id="id5" alt="tree" onclick="check(5)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id6" alt="tree" onclick="check(6)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id7" alt="tree" onclick="check(7)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id8" alt="tree" onclick="check(8)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id9" alt="tree" onclick="check(9)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"><img src="Tree.jpg" id="id10" alt="tree" onclick="check(10)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id11" alt="tree" onclick="check(11)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id12" alt="tree" onclick="check(12)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id13" alt="tree" onclick="check(13)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id14" alt="tree" onclick="check(14)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"><img src="Tree.jpg" id="id15" alt="tree" onclick="check(15)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id16" alt="tree" onclick="check(16)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id17" alt="tree" onclick="check(17)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id18" alt="tree" onclick="check(18)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id19" alt="tree" onclick="check(19)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>''
+        </div>
+        <div class="row">
+            <div class="col-sm-1"><img src="Tree.jpg" id="id20" alt="tree" onclick="check(20)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id21" alt="tree" onclick="check(21)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id22" alt="tree" onclick="check(22)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id23" alt="tree" onclick="check(23)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+            <div class="col-sm-1"><img src="Tree.jpg" id="id24" alt="tree" onclick="check(24)"
+                    style="width: 120%;height: 100%; padding-bottom: 5%;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ids = ["id0", "id1", "id2", "id3", "id4", "id5", "id6", "id7", "id8", "id9", "id10", "id11", "id12", "id13", "id14", "id15", "id16", "id17", "id18", "id19", "id20", "id21", "id22", "id23", "id24"]
+        var shakeCount = 0;
+        var birdLocation = 18;
+
+        function check(position) {
+            id = ids[position]
+            img_pos = document.getElementById(id)
+            if (position == birdLocation)
+                img_pos.src = "bird.jpg"
+            else
+                img_pos.src = "nest.jpg"
+
+            shakeCount = shakeCount + 1
+            document.getElementById("shakes").innerHTML = "Number of shakes is " + shakeCount;
+            document.getElementById("score").innerHTML = "The score is " + locationScore(position, birdLocation);
+        }
+
+        
+        
+        function locationScore(pos1, pos2) {
+            var row1, row2, col1, col2
+            var data = [[0, 1, 2, 3, 4], [5, 6, 7, 8, 9], [10, 11, 12, 13, 14], [15, 16, 17, 18, 19], [20, 21, 22, 23, 24]]
+            for (let x = 0; x < data.length; x++) {
+                for (let y = 0; y < data[x].length; y++) {
+                    if (pos1 == data[x][y]) {
+                        row1 = x
+                        col1 = y
+                    }
+                }
+            }
+
+            for (let x = 0; x < data.length; x++) {
+                for (let y = 0; y < data[x].length; y++) {
+                    if (pos2 == data[x][y]) {
+                        row2 = x
+                        col2 = y
+                    }
+                }
+            }
+
+            if (row1 == row2)
+                return 1
+            else if (col1 == col2)
+                return 1
+            else if (Math.abs(pos1 - pos2) == 4 || Math.abs(pos1 - pos2) == 6)
+                return 1
+            else
+                return 0
+        }
+    </script>
+
+</body>
+
+</html>
